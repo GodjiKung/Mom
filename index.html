@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Mom</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #ffecec;
+    }
+    .page {
+      display: none;
+      text-align: center;
+    }
+    .active {
+      display: block;
+    }
+    img {
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 10px;
+      border: 5px solid #ff6b81; /* กรอบรอบรูป */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* เงาสวยๆ */
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff6b81;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #ff4757;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    .card p {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- หน้าแรก เค้ก -->
+  <div id="intro" class="page active">
+    <img src="https://github.com/GodjiKung/Mom/blob/main/cake.jpg?raw=true" alt="Birthday Cake">
+    <br>
+    <button class="btn" onclick="goToMain()">เป่าเค้ก</button>
+  </div>
+
+  <!-- หน้าหลัก (HBD + รูปแม่) -->
+  <div id="main" class="page">
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/GodjiKung/Mom/0e4d8e8bd31b00ccf70a8d92e00a837f5f59bf03/mom1.jpg" alt="แม่ที่รัก">
+      <img src="https://raw.githubusercontent.com/GodjiKung/Mom/0e4d8e8bd31b00ccf70a8d92e00a837f5f59bf03/mom3.jpg" alt="แม่ที่รัก">
+      <p>HBD ขอให้วันเกิดปีนี้สุขภาพแข็งแรง มีความสุขมาก กินอิ่มนอนหลับ พักผ่อนเยอะๆ  
+      ทานข้าวเยอะๆ และมีความสุขในทุกๆวัน 💖</p>
+    </div>
+  </div>
+
+  <script>
+    function goToMain() {
+      document.getElementById('intro').classList.remove('active');
+      document.getElementById('main').classList.add('active');
+    }
+  </script>
+</body>
+</html>
